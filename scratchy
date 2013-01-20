@@ -17,17 +17,17 @@ while True:
    data = irc.recv ( 4096 )
    if data.find ( 'PING' ) != -1:
       irc.send ( 'PONG ' + data.split() [ 1 ] + '\r\n' )
-   if data.find ( '!botty quit' ) != -1:
+   if data.find ( '!scratchy quit' ) != -1:
       irc.send ( 'PRIVMSG #akira :Fine, if you dont want me\r\n' )
       irc.send ( 'QUIT\r\n' )
-   if data.find ( 'hi botty' ) != -1:
+   if data.find ( 'hi scratchy' ) != -1:
       irc.send ( 'PRIVMSG #akira :I already said hi...\r\n' )
-   if data.find ( 'hello botty' ) != -1:
+   if data.find ( 'hello scratchy' ) != -1:
       irc.send ( 'PRIVMSG #akira :I already said hi...\r\n' )
    if data.find ( 'KICK' ) != -1:
       irc.send ( 'JOIN #akira\r\n' )
    if data.find ( 'cheese' ) != -1:
       irc.send ( 'PRIVMSG #akira :WHERE!!!!!!\r\n' )
-   if data.find ( 'slaps botty' ) != -1:
+   if data.find ( 'slaps scratchy' ) != -1:
       irc.send ( 'PRIVMSG #akira :This is the Trout Protection Agency. Please put the Trout Down and walk away with your hands in the air.\r\n' )
    print data
